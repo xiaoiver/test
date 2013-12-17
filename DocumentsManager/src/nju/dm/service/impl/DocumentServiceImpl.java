@@ -47,4 +47,14 @@ public class DocumentServiceImpl implements IDocumentService{
 	public Document getDocumentById(Integer documentId) {
 		return documentDAO.getDocumentById(documentId);
 	}
+
+	@Override
+	public void updateDocument(Document document) {
+		documentDAO.updateDocument(document);
+	}
+
+	@Override
+	public void deleteDocument(Document document) {
+		documentDAO.deleteDocument(document);
+	}
 }

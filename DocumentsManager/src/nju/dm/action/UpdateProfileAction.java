@@ -1,5 +1,7 @@
 package nju.dm.action;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 import javax.annotation.Resource;
@@ -35,6 +37,9 @@ public class UpdateProfileAction extends ActionSupport implements SessionAware{
 			session.put("user", updatedUser);
 			return "success";
 		}else{
+			Date d = user.getRegDate();
+			SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+			request.setAttribute("formattedRegDate", format.format(d));
 			return "showProfile";
 		}
 	}

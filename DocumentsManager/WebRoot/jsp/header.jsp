@@ -19,6 +19,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-validate.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/user/login.js"></script>
+	<script type="text/javascript" src="js/search/search.js"></script>
 </head>  
 <body>
 <nav class="navbar navbar-default" role="navigation">

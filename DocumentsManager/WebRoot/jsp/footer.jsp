@@ -13,15 +13,5 @@
       <p>&copy;2013</p>
     </footer>
     </div> <!-- /container -->
-    
-    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery-validate.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/user/login.js"></script>
-	<script type="text/javascript" src="js/user/register.js"></script>
-	<script type="text/javascript" src="js/document/create.js"></script>
-	<script type="text/javascript" src="js/search/search.js"></script>
-	<script type="text/javascript" src="js/user/personal-homepage.js"></script>
   </body>
 </html>

@@ -62,4 +62,14 @@ public class DocumentDAOImpl extends BaseDAO implements IDocumentDAO {
 		return (Document)criteria.uniqueResult();
 	}
 
+	@Override
+	public void updateDocument(Document document) {
+		this.getHibernateTemplate().merge(document);
+	}
+
+	@Override
+	public void deleteDocument(Document document) {
+		this.getHibernateTemplate().delete(document);
+	}
+
 }

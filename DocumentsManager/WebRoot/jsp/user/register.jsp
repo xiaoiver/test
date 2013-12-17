@@ -38,4 +38,5 @@
 	
 	</form>
 </div>
+<script type="text/javascript" src="js/user/register.js"></script>
 <jsp:include page="../footer.jsp" />

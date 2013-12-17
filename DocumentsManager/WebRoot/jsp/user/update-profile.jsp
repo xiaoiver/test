@@ -12,22 +12,22 @@
 	<form id="updateProfileForm" action="user/updateProfile.action" method="post">
 		<div class="input-group input-group-lg">
 			<input type="text" name="name" id="name" class="form-control" value="${user.name}" />
-			<span class="input-group-addon glyphicon glyphicon-asterisk"> 姓名</span>
+			<span class="input-group-addon"> 姓名</span>
 		</div>
 
 		<div class="input-group input-group-lg">
 			<input type="text" name="phone" id="phone" class="form-control" value="${user.phone}" />
-			<span class="input-group-addon glyphicon glyphicon-asterisk"> 电话</span>
+			<span class="input-group-addon"> 电话</span>
 		</div>
 		
 		<div class="input-group input-group-lg">
 			<input type="text" name="email" id="email" class="form-control" value="${user.email}" />
-			<span class="input-group-addon glyphicon glyphicon-asterisk"> E-mail</span>
+			<span class="input-group-addon"> E-mail</span>
 		</div>
 		
 		<div class="input-group input-group-lg">
-			<input type="text" disabled="disabled" class="form-control" value="${user.regDate}" />
-			<span class="input-group-addon glyphicon glyphicon-asterisk"> 注册日期</span>
+			<input type="text" disabled="disabled" class="form-control" value="${formattedRegDate}" />
+			<span class="input-group-addon"> 注册日期</span>
 		</div>
 		
 		<div class="btn-group">

@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <jsp:include page="../header.jsp" />
 
 <ol class="breadcrumb">
@@ -15,12 +16,25 @@
 
 <div class="tab-content">
   <div class="tab-pane" id="profilePanel">
-  	<div>
-	  	姓名：${user.name}
-	  	电话：${user.phone}
-	  	E-mail：${user.email}
+  	<div class="container" style="width:400px">
+  		<h3>${user.userType.name}</h3>
+  	
+	  	<div class="input-group input-group-lg">
+	  		<span class="input-group-addon glyphicon glyphicon-user"> 姓名</span>
+			<input type="text" disabled="disabled" class="form-control" value="${user.name}" />	
+		</div>
+
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon glyphicon glyphicon-earphone"> 电话</span>
+			<input type="text" disabled="disabled" class="form-control" value="${user.phone}" />
+		</div>
+		
+		<div class="input-group input-group-lg">
+			<span class="input-group-addon glyphicon glyphicon-envelope"> E-mail</span>
+			<input type="text" disabled="disabled" class="form-control" value="${user.email}" />	
+		</div>
   	</div>
-  	<div class="btn-group btn-group-lg">
+  	<div class="btn-group btn-group-lg" style="margin:10px; left:150px;">
   		<a href="user/updateProfile.action" class="btn btn-lg btn-primary">修改个人资料</a>
 	</div>
   </div>
@@ -54,10 +68,13 @@
 						${document.keywords}
 					</td>
 					<td>
-						${document.addTime}
+						<fmt:formatDate value="${document.addTime}" pattern="yyyy-MM-dd HH:mm:ss" />
 					</td>
 					<td>
-						<a href="document/editDocument.action?documentId=${document.documentId}" class="btn btn-sm btn-primary">修改文献</a>
+						<div class="btn-group">
+							<a href="document/editDocument.action?documentId=${document.documentId}" class="btn btn-sm btn-primary">修改文献</a>
+							<a href="document/deleteDocument.action?documentId=${document.documentId}" class="btn btn-sm btn-danger">删除</a>
+						</div>
 					</td>
 				</tr>
 				</c:forEach>
@@ -110,4 +127,5 @@
   </div>
 </div>
 
+<script type="text/javascript" src="js/user/personal-homepage.js"></script>
 <jsp:include page="../footer.jsp" />

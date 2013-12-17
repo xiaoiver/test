@@ -20,4 +20,8 @@ public interface IDocumentDAO {
 
 	Document getDocumentById(Integer documentId);
 
+	void updateDocument(Document document);
+
+	void deleteDocument(Document document);
+
 }

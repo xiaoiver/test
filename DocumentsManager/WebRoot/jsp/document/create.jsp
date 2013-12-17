@@ -28,7 +28,7 @@
 		</div>
 		
 		<div class="input-group">
-			<input type="text" name="year" id="year" class="form-control" data-required />
+			<input type="text" name="year" id="year" class="form-control" placeholder="例如1972" data-required />
 			<span class="input-group-addon glyphicon glyphicon-asterisk"> 出版年份</span>
 		</div>
 		
@@ -43,7 +43,7 @@
 		</div>
 		
 		<div class="input-group">
-			<input type="text" name="keywords" id="keywords" class="form-control" data-required />
+			<input type="text" name="keywords" id="keywords" placeholder="例如keyword1,keyword2" class="form-control" data-required />
 			<span class="input-group-addon glyphicon glyphicon-asterisk"> 关键词</span>
 		</div>
 		
@@ -64,4 +64,5 @@
 	</form>
 </div>
 
+<script type="text/javascript" src="js/document/create.js"></script>
 <jsp:include page="../footer.jsp" />
