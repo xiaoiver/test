@@ -11,17 +11,17 @@
 	<input id="registerError" type="hidden" value="${registerError}" />
 	<form id="registerForm" action="user/register.action" method="post">
 		<div class="input-group input-group-lg">
-			<input type="text" name="username" id="username" class="form-control" data-required />
+			<input type="text" name="username" id="username" class="form-control" data-pattern="/^(\w){6,16}$/" data-required />
 			<span class="input-group-addon glyphicon glyphicon-asterisk"> 用户名</span>
 		</div>
 		
 		<div class="input-group input-group-lg">
-			<input id="password" type="password" name="password" class="form-control" data-required />
+			<input id="password" type="password" name="password" class="form-control" data-pattern="/^(\w){6,16}$/" data-required />
 			<span class="input-group-addon glyphicon glyphicon-asterisk"> 密码</span>
 		</div>
 		
 		<div class="input-group input-group-lg">
-			<input id="repeat" type="password" name="repeat" class="form-control" data-required data-conditional="confirm" />
+			<input id="repeat" type="password" name="repeat" class="form-control" data-pattern="/^(\w){6,16}$/" data-required data-conditional="confirm" />
 			<span class="input-group-addon glyphicon glyphicon-asterisk"> 确认密码</span>
 		</div>
 		

@@ -21,7 +21,11 @@
 		</action>
 		<action name="updateProfile" class="nju.dm.action.UpdateProfileAction">
 			<result name="showProfile">/jsp/user/update-profile.jsp</result>
-			<result name="success">/jsp/user/personal-homepage.jsp</result>
+			<result name="success" type="redirectAction">
+				<param name="actionName">personalHomepage</param>
+				<param name="msgCode">success-update-profile</param>
+            	<param name="namespace">/user</param>
+			</result>
 		</action>
 		<action name="personalHomepage" class="nju.dm.action.PersonalHomepageAction">
 			<result name="result">/jsp/user/personal-homepage.jsp</result>
@@ -33,6 +37,7 @@
 			<result name="showDocumentForm" type="redirect">/jsp/document/create.jsp</result>
 			<result name="success" type="redirectAction">
 				<param name="actionName">personalHomepage</param>
+				<param name="msgCode">success-create-document</param>
 				<param name="pageNum">1</param>
             	<param name="namespace">/user</param>
 			</result>
@@ -41,6 +46,7 @@
 			<result name="showDocumentForm">/jsp/document/edit.jsp</result>
 			<result name="success" type="redirectAction">
 				<param name="actionName">personalHomepage</param>
+				<param name="msgCode">success-edit-document</param>
 				<param name="pageNum">1</param>
             	<param name="namespace">/user</param>
 			</result>
@@ -48,6 +54,7 @@
 		<action name="deleteDocument" class="nju.dm.action.DeleteDocumentAction">
 			<result name="success" type="redirectAction">
 				<param name="actionName">personalHomepage</param>
+				<param name="msgCode">success-delete-document</param>
 				<param name="pageNum">1</param>
             	<param name="namespace">/user</param>
 			</result>

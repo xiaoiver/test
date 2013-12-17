@@ -32,11 +32,11 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		String password = request.getParameter("password");
 		User user = null;
 		if(!userService.isUserExist(username)){
-			request.setAttribute("loginError", "wrong-username");
+			request.setAttribute("msgCode", "failure-wrong-username");
 		}else{
 			user = loginService.queryUser(username, password);			
 			if(user==null){
-				request.setAttribute("loginError", "wrong-password");
+				request.setAttribute("msgCode", "failure-wrong-password");
 				request.setAttribute("rightUsername", username);
 			}
 		}

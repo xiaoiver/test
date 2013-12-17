@@ -5,9 +5,7 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import nju.dm.domain.DocumentType;
-import nju.dm.domain.UserType;
 import nju.dm.service.IDocumentService;
-import nju.dm.service.IUserService;
 
 import org.apache.struts2.json.annotations.JSON;
 

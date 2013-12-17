@@ -48,6 +48,8 @@ public class PersonalHomepageAction extends ActionSupport implements SessionAwar
 		request.setAttribute("documents", documents);
 		request.setAttribute("totalPageNum", totalPageNum);
 		request.setAttribute("currentPage", pageNum);
+		
+		request.setAttribute("msgCode",request.getParameter("msgCode"));
 		return "result";
 	}
 	

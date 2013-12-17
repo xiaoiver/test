@@ -59,7 +59,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		if(user == null){
 	%>
 	<li id="loginDialog">
-		<input id="loginError" type="hidden" value="${loginError}" /><!-- 保存错误信息  -->
     	<input id="hiddenUsername" type="hidden" value="${rightUsername}" /><!-- 保存正确的用户名 -->
 		<form id="login" class="navbar-form" role="form" action="user/login.action" method="post">
 	      <div class="form-group">
@@ -93,6 +92,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </div>
 </nav>
 
+<input type="hidden" name="msgCode" id="msgCode" value="${msgCode}" /><!-- 保存反馈信息码  -->
 <div id="messageDiv">
 	<div id="messageBlock">
 	</div>
